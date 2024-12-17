@@ -1,19 +1,29 @@
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
+  const handleHome = () => {
+    navigate('/');
+  };
+
   return (
-    <nav className="bg-gray-900 text-white p-4">
+    <nav className="bg-gray-900 text-white p-4 sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
-        <h1 className="text-xl font-bold animate__animated animate__fadeIn animate__delay-0.5s">Trading Signals</h1>
-        <ul className="flex space-x-4">
-          <li>
-            <Link 
-              to="/" 
-              className="hover:text-yellow-400 transition-all duration-300 ease-in-out transform hover:scale-105 animate__animated animate__fadeIn animate__delay-1s">
-              Home
-            </Link>
-          </li>
-        </ul>
+        {/* Logo and Name Section */}
+        <div className="flex items-center space-x-2">
+          <img 
+            src='./src/assets/logo.png' 
+            alt="Logo" 
+            className="h-8 w-auto" // Adjusts the logo size to match the text size
+          />
+          <h1
+            onClick={handleHome}
+            className="text-xl font-bold animate__animated animate__fadeIn animate__delay-0.5s cursor-pointer"
+          >
+            Trading Signals
+          </h1>
+        </div>
       </div>
     </nav>
   );

@@ -10,6 +10,10 @@ const Home = () => {
     navigate('/signup');
   };
 
+  const handlePayment = () => {
+    navigate('/payment');
+  };
+
   return (
     <div>
       {/* Hero Section */}
@@ -73,7 +77,7 @@ const Home = () => {
               <li><FontAwesomeIcon icon={faCheck} className="text-green-500 mr-2" /> Email Notifications</li>
               <li><FontAwesomeIcon icon={faTimes} className="text-red-500 mr-2" /> Premium Support</li>
             </ul>
-            <button className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105">
+            <button onClick={handlePayment}  className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105">
               Get Started
             </button>
           </div>
@@ -88,7 +92,7 @@ const Home = () => {
               <li><FontAwesomeIcon icon={faCheck} className="text-green-500 mr-2" /> Email & SMS Notifications</li>
               <li><FontAwesomeIcon icon={faCheck} className="text-green-500 mr-2" /> Premium Support</li>
             </ul>
-            <button className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105">
+            <button onClick={handlePayment}  className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105">
               Get Started
             </button>
           </div>
@@ -103,7 +107,7 @@ const Home = () => {
               <li><FontAwesomeIcon icon={faCheck} className="text-green-500 mr-2" /> Email, SMS & App Notifications</li>
               <li><FontAwesomeIcon icon={faCheck} className="text-green-500 mr-2" /> 24/7 Premium Support</li>
             </ul>
-            <button className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105">
+            <button onClick={handlePayment} className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105">
               Get Started
             </button>
           </div>
